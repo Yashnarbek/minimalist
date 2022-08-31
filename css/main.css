@@ -1,6 +1,6 @@
 :root {
   --main-font-weight: 400;
-  --main-bg-color: #F2F2F2;
+  --main-bg-color: #fafafa;
 }
 
 @font-face {
@@ -332,13 +332,14 @@ template {
   box-sizing: inherit;
 }
 
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 img {
   display: block;
   height: auto;
-}
-
-html {
-  height: 100%;
 }
 
 body {
@@ -596,7 +597,6 @@ body {
   align-items: center;
   max-width: 200px;
   padding-right: 35px;
-  scroll-behavior: smooth;
   font-weight: 400;
   font-size: 12px;
   text-decoration: none;
@@ -893,9 +893,21 @@ body {
   .interested__box {
     width: 350px;
   }
+  .interested__line {
+    display: inline-block;
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 32px;
+    background-color: #33323D;
+    opacity: 0.15;
+  }
   .interested__heading {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: start;
+  }
+  .interested__contact {
+    margin-left: 32px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -904,4 +916,212 @@ body {
     padding-bottom: 150px;
   }
 }
-/*interested section end*//*# sourceMappingURL=main.css.map */
+/*interested section end*/
+/*CONTACT HTML FILE BIGEN */
+/*touch section bigen*/
+.touch {
+  padding-top: 20px;
+  padding-bottom: 31px;
+  background-color: var(--main-bg-color);
+}
+
+.touch__wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid rgba(51, 50, 61, 0.0823529412);
+  border-bottom: 1px solid rgba(51, 50, 61, 0.0823529412);
+}
+
+.touch__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.title-box__text {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.title-box__list {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.title-box__item:nth-child(2) {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+@media only screen and (min-width: 992px) {
+  .touch__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title-box {
+    width: 635px;
+  }
+}
+/*touch section end*/
+/*contact section bigen*/
+.contact {
+  padding-top: 48px;
+  padding-bottom: 109px;
+  background-color: var(--main-bg-color);
+}
+
+.contact__heading {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form__inp-box {
+  width: 100%;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 30px;
+  color: #33323D;
+  opacity: 0.8;
+}
+
+.form__inp {
+  display: block;
+  margin-top: 8px;
+  padding: 9px 15px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  background-color: rgba(51, 50, 61, 0.0823529412);
+  color: #33323D;
+  border: 0;
+}
+
+.form__inp:not(:-moz-placeholder-shown):not(:focus):invalid ~ .form__invalid {
+  opacity: 1;
+}
+
+.form__inp:not(:-ms-input-placeholder):not(:focus):invalid ~ .form__invalid {
+  opacity: 1;
+}
+
+.form__inp:not(:placeholder-shown):not(:focus):invalid ~ .form__invalid {
+  opacity: 1;
+}
+
+.form__inp::-moz-placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.form__inp:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.form__inp::placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.form__invalid {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  color: #F43030;
+  opacity: 0;
+}
+
+.form__text {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: -8px;
+  padding: 9px 15px;
+  resize: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  background-color: rgba(51, 50, 61, 0.0823529412);
+  color: #33323D;
+  border: none;
+}
+
+.form__text:not(:-moz-placeholder-shown):not(:focus):invalid ~ .form__invalid {
+  opacity: 1;
+}
+
+.form__text:not(:-ms-input-placeholder):not(:focus):invalid ~ .form__invalid {
+  opacity: 1;
+}
+
+.form__text:not(:placeholder-shown):not(:focus):invalid ~ .form__invalid {
+  opacity: 1;
+}
+
+.form__button {
+  display: inline-block;
+  padding: 17px 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #203A4C;
+  color: #FFFFFF;
+  border: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .contact__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-box {
+    width: 635px;
+  }
+}
+/*contact section bigen*/
+/*CONTACT HTML FILE BIGEN *//*# sourceMappingURL=main.css.map */
