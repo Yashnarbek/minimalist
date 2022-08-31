@@ -1,10 +1,12 @@
-
+.hero {
+    background-color: var(--main-bg-color);
+}
 .hero__wrapper {
-    margin-bottom: 390px;
-    padding-top: 200px;
+    padding-top: 270px;
     background-image: url("/images/hero.jpg");
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 350px 270px;
 
     @media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
     only screen and (    min--moz-device-pixel-ratio: 1.3 ),
@@ -19,11 +21,37 @@
 
     }
 }
+@include mobile-first (350px) {
+    .hero__wrapper {
+        padding-top: 300px;
+        background-size: 380px 300px;
+    }
+}
+@include mobile-first (380px) {
+    .hero__wrapper {
+        padding-top: 300px;
+        background-size: 450px 300px;
+    }
+}
+@include mobile-first (450px) {
+    .hero__wrapper {
+        padding-top: 330px;
+        background-size: 560px 330px;
+    }
+}
+@include mobile-first (560px) {
+    .hero__wrapper {
+        padding-top: 380px;
+        background-size: 650px 380px;
+    }
+}
 .hero__box {
-    position: absolute;
-    top: 300px;
+    padding-top: 24px;
+    padding-bottom: 96px;
+    background-color: var(--main-bg-color);
 }
 .hero__heading {
+    margin-top: 0;
     font-family: "Ibarra Real Nova";
     font-weight: 700;
     font-size: 40px;
@@ -34,8 +62,9 @@
 .hero__link {
     display: inline-flex;
     align-items: center;
-    padding-right: 35px;
     max-width: 200px;
+    padding-right: 35px;
+    scroll-behavior: smooth;
     font-weight: 400;
     font-size: 12px;
     text-decoration: none;
@@ -59,32 +88,10 @@
 }
 .hero__link:hover {
     background-color: #5FB4A2;
+    transition: background 0.6s ease;
 }
-@include mobile-first (340px) {
-    .hero__wrapper {
-        padding-top: 271px;
-        background-size: cover;
-        background-position: center;
-    }
-    .hero__box {
-        position: absolute;
-        top: 380px;
-        padding-right: 32px;
-    }
-    .hero__heading {
-        margin-top: 0;
-    }
-}
-@include mobile-first (435px) {
-    .hero__wrapper {
-        margin-bottom: 300px;
-    }
-}
-@include mobile-first (560px) {
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+
+@include mobile-first (650px) {
     .hero__wrapper {
         background-image: url("/images/hero-tablet.jpg");
         background-size: cover;
@@ -104,6 +111,7 @@
     }
     .hero__box {
         width: 514px;
+        padding-bottom: 0;
     }
     .hero__heading {
         margin-bottom: 53px;
@@ -128,5 +136,14 @@
     }
     .hero__box {
         width: 445px;
+        padding-top: 55px;
+        padding-right: 55px;
+    }
+    .hero__heading {
+        font-size: 50px;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: -0.446429px;
     }
 }

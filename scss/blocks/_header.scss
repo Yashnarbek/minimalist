@@ -1,6 +1,7 @@
 .site-header {
     padding-top: 32px;
     padding-bottom: 24px;
+    background-color: var(--main-bg-color);
 }
 .site-header__wrapper {
     position: relative;
@@ -132,5 +133,11 @@
     }
     .sitenav__link--active {
         color: #5FB4A2;
+    }
+}
+@include mobile-first (992px) {
+    .site-header {
+        padding-top: 73px;
+        padding-bottom: 63px;
     }
 }
