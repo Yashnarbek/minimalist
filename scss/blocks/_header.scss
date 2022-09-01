@@ -12,9 +12,9 @@
 }
 
 .site-header__burger {
-    display: inline-block;
+    display: block;
     width: 24px;
-    height: 13px;
+    height: 19px;
     background-color: transparent;
     background-image: url("/images/burger.svg");
     background-repeat: no-repeat;
@@ -22,18 +22,16 @@
     border: none;
 }
 .sitenav {
-    position: fixed;
+    position: absolute;
     z-index: 11;
-    top: 87px;
-    right: 0;
+    top: 61px;
+    right: -32px;
     display: none;
     width: 223px;
     height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 24px;
-    padding-right: 24px;
-    background-color: #33323D;
+    padding: 40px 24px;
+    white-space: nowrap;
+    background-color: #33323d;
 
     animation-name: burger;
     animation-timing-function: ease;
@@ -45,7 +43,7 @@
         right: -400px;
     }
     100%{
-        right: 0;
+        right: -32px;
     }
 }
 .sitenav__list {
@@ -60,6 +58,7 @@
     margin-bottom: 30px;
 }
 .sitenav__link {
+    display: inline-block;
     font-weight: 400;
     font-size: 12px;
     text-decoration: none;
@@ -67,15 +66,14 @@
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #FFFFFF;    
+    color: #ffffff;    
 }
-
 .close {
+    background-color: transparent;
     background-image: url("/images/close.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 19px 19px;
     background-position: center;
-
 }
 .open {
     display: block;
@@ -83,7 +81,6 @@
 .overflow {
     overflow: hidden;
 }
-
 @include mobile-first (650px) {
     .site-header {
         padding-top: 69px;
@@ -97,8 +94,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0;
         background-color: transparent;
         width: 100%;
         height: auto;
@@ -113,7 +109,6 @@
         border-top: none;
         padding-top: 0;
     }
-
     .sitenav__close {
         display: none;
     }
@@ -126,14 +121,18 @@
         line-height: 15px;
         text-align: center;
         letter-spacing: 1.5px;
-        color: #33323D;        
+        color: #33323d;        
     }
     .sitenav__link:active {
-        color: #5FB4A2;
+        color: #5fb4a2;
     }
     .sitenav__link--active {
-        color: #5FB4A2;
+        color: #5fb4a2;
     }
+    .overflow {
+        overflow: scroll;
+    }
+
 }
 @include mobile-first (992px) {
     .site-header {

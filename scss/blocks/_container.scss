@@ -1,7 +1,14 @@
 .container {
     max-width: 1150px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-left: 32px;
     padding-right: 32px;
 } 
+@include mobile-first (992px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.min.css">
     <title>Document</title>
 </head>
 <body>
+
+    <!-- HEADER BIGEN  -->
     <header class="site-header">
         <div class="container">
             <div class="site-header__wrapper">
@@ -17,13 +19,13 @@
                 <nav class="site-header__nav sitenav">
                     <ul class="sitenav__list">
                         <li class="sitenav__item">
-                            <a href="index.html" class="sitenav__link ">HOME</a>
+                            <a href="index.html" class="sitenav__link ">home</a>
                         </li>
                         <li class="sitenav__item">
-                            <a href="portfolio.html" class="sitenav__link">PORTFOLIO</a>
+                            <a href="portfolio.html" class="sitenav__link">portfolio</a>
                         </li>
                         <li class="sitenav__item">
-                            <a href="contact.html" class="sitenav__link sitenav__link--active">CONTACT ME</a>
+                            <a href="contact.html" class="sitenav__link sitenav__link--active">contact me</a>
                         </li>
                     </ul>
                 </nav>
@@ -31,7 +33,8 @@
             </div>
         </div>
     </header>    
-
+    <!-- HEADER END  -->
+    
     <!-- MAIN BIGEN  -->
     <main class="site-main">
         <!-- touch section bigen  -->
@@ -65,7 +68,7 @@
             </div>
         </section>
         <!-- touch section end -->
-
+        
         <!-- contact section bigen  -->
         <section class="contact">
             <div class="container">
@@ -74,19 +77,19 @@
                         <h2 class="contact__heading">Contact Me</h2>
                     </div>
                     <form class="form-box" action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
-                        <label class="form__inp-box" for="name-of-user">Name
-                            <input class="form__inp" type="text" name="user_name" id="name-of-user" minlength="2" placeholder="Jane Appleseed" required>
-                            <span class="form__invalid">This field is required</span>
+                        <label class="form-box__inp-box" for="name-of-user">Name
+                            <input class="form-box__inp" type="text" name="user_name" id="name-of-user" aria-label="Enter your name" minlength="2" placeholder="Jane Appleseed" required>
+                            <span class="form-box__invalid" aria-hidden="true">This field is required</span>
                         </label>
-                        <label class="form__inp-box" for="email-of-user">Email Address
-                            <input class="form__inp" type="email" name="user_email" id="email-of-user" placeholder="email@example.com" required>
-                            <span class="form__invalid">This field is required</span>
+                        <label class="form-box__inp-box" for="email-of-user">Email Address
+                            <input class="form-box__inp" type="email" name="user_email" id="email-of-user" aria-label="Enter your email" placeholder="email@example.com" required>
+                            <span class="form-box__invalid" aria-hidden="true">This field is required</span>
                         </label>
-                        <label class="form__inp-box" for="text-of-user">Message
-                            <textarea class="form__text" name="user__text" id="text-of-user" rows="2" minlength="2" placeholder="How can I help?" required></textarea>
-                            <span class="form__invalid">This field is required</span>
+                        <label class="form-box__inp-box" for="text-of-user">Message
+                            <textarea class="form-box__text" name="user__text" id="text-of-user" aria-label="Enter your text" rows="2" minlength="2" placeholder="How can I help?" required></textarea>
+                            <span class="form-box__invalid" aria-hidden="true">This field is required</span>
                         </label>
-                        <button class="form__button">SEND MESSAGE</button>
+                        <button class="form-box__button" type="submit">send message</button>
                     </form>
                 </div>
             </div>
@@ -94,6 +97,7 @@
         <!-- contact section end  -->
     </main>
     <!-- MAIN END  -->
+
     <footer class="site-footer">
         <div class="container">
             <div class="site-footer__wrapper">
@@ -102,13 +106,13 @@
                 </a>
                 <ul class="site-footer__nav">
                     <li class="site-footer__item">
-                        <a class="site-footer__link" href="index.html">HOME</a>
+                        <a class="site-footer__link" href="index.html">home</a>
                     </li>
                     <li class="site-footer__item">
-                        <a class="site-footer__link" href="portfolio.html">PORTFOLIO</a>
+                        <a class="site-footer__link" href="portfolio.html">portfolio</a>
                     </li>
                     <li class="site-footer__item">
-                        <a class="site-footer__link" href="contact.html">CONTACT ME</a>
+                        <a class="site-footer__link" href="contact.html">contact me</a>
                     </li>
                 </ul>
                 <ul class="site-footer__social">
@@ -132,7 +136,7 @@
         </div>
     </footer>
     <!-- FOOTER END  -->
-
+    
     <script src="/js/main.js"></script>
 </body>
 </html>

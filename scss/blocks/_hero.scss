@@ -6,7 +6,7 @@
     background-image: url("/images/hero.jpg");
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 350px 270px;
+    background-size: 100% 270px;
 
     @media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
     only screen and (    min--moz-device-pixel-ratio: 1.3 ),
@@ -18,33 +18,9 @@
         .hero__wrapper {
             background-image: url("/images/hero@2x.jpg");
         }
+    }
+}
 
-    }
-}
-@include mobile-first (350px) {
-    .hero__wrapper {
-        padding-top: 300px;
-        background-size: 380px 300px;
-    }
-}
-@include mobile-first (380px) {
-    .hero__wrapper {
-        padding-top: 300px;
-        background-size: 450px 300px;
-    }
-}
-@include mobile-first (450px) {
-    .hero__wrapper {
-        padding-top: 330px;
-        background-size: 560px 330px;
-    }
-}
-@include mobile-first (560px) {
-    .hero__wrapper {
-        padding-top: 380px;
-        background-size: 650px 380px;
-    }
-}
 .hero__box {
     padding-top: 24px;
     padding-bottom: 96px;
@@ -57,12 +33,13 @@
     font-size: 40px;
     line-height: 42px;
     letter-spacing: -0.357143px;
-    color: #33323D;    
+    color: #33323d;    
 }
 .hero__link {
     display: inline-flex;
     align-items: center;
     max-width: 200px;
+    width: 200px;
     padding-right: 35px;
     font-weight: 400;
     font-size: 12px;
@@ -71,8 +48,8 @@
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background-color: #203A4C;
-    color: #FFFFFF;    
+    background-color: #203a4c;
+    color: #ffffff;    
 }
 .hero__link::before {
     content: "";
@@ -86,14 +63,32 @@
     background-position: center;
 }
 .hero__link:hover {
-    background-color: #5FB4A2;
+    background-color: #5fb4a2;
     transition: background 0.6s ease;
 }
-
+@include mobile-first (380px) {
+    .hero__wrapper {
+        padding-top: 320px;
+        background-size: 100% 320px;
+    }
+}
+@include mobile-first (500px) {
+    .hero__wrapper {
+        padding-top: 380px;
+        background-size: 100% 380px;
+    }
+}
+@include mobile-first (530px) {
+    .hero__wrapper {
+        padding-top: 380px;
+        background-size: 100% 380px;
+    }
+}
 @include mobile-first (650px) {
     .hero__wrapper {
+        padding-top: 290px;
         background-image: url("/images/hero-tablet.jpg");
-        background-size: cover;
+        background-size: 100% 100%;
     }
 
     @media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
@@ -106,7 +101,6 @@
         .hero__wrapper {
             background-image: url("/images/hero-tablet@2x.jpg");
         }
-
     }
     .hero__box {
         width: 514px;
@@ -118,7 +112,9 @@
 }
 @include mobile-first (992px) {
     .hero__wrapper {
+        padding-top: 300px;
         background-image: url("/images/hero-desktop.jpg");
+        background-size: 100% 100%;
     }
 
     @media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
@@ -131,7 +127,6 @@
         .hero__wrapper {
             background-image: url("/images/hero-desktop@2x.jpg");
         }
-
     }
     .hero__box {
         width: 445px;

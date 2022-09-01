@@ -1,7 +1,7 @@
 .site-footer {
     padding-top: 56px;
     padding-bottom: 56px;
-    background-color: #33323D;
+    background-color: #33323d;
 }
 .site-footer__wrapper {
     display: flex;
@@ -23,14 +23,15 @@
     margin-bottom: 32px;
 } 
 .site-footer__link {
-    text-decoration: none;
+    display: inline-block;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     text-align: center;
     letter-spacing: 2px;
+    text-decoration: none;
     text-transform: uppercase;
-    color: #FFFFFF;    
+    color: #ffffff;    
 }
 .site-footer__social {
     display: flex;
